@@ -1,0 +1,3 @@
+name = input("Kā tevi sauc?")
+sep= ...
+print = ("Sveiks,", sep, name)
