@@ -2,10 +2,13 @@ import os
 os.system('cls')
 print("\n")
 
-skaitli = input("Ievadi skaitļus no 1-9999: ")
-burti = input("Ievadi 2 burtus: ")
-numurs = burti + skaitli
-if (numurs):
-    print(f"Numura zīme '{numurs}' ir derīga.")
+import re
+
+numurs = input("Ievadiet transportlīdzekļa numura zīmi: ").strip().upper()
+
+modelis = r"^[A-PR-UZ]{2}-[1-9]\d{0,3}$"
+
+if re.match(modelis, numurs):
+    print(numurs, "numura zīme ir derīga.")
 else:
-    print(f"Numura zīme '{numurs}' nav derīga.")
+    print(numurs, "numura zīme nav derīga.")
