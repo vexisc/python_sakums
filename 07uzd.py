@@ -3,7 +3,7 @@ import os
 os.system('cls')
 print("\n")
 
-1#
+#1
 
 produkti = {
     'briseles kāposti': 4.4,
@@ -53,12 +53,12 @@ while summa < 90:
     c = int(input("Ievieto monētu: "))
     if c in centi:
         summa = summa + c
-        print(f"Tagadējā summa ir", summa)
+        print(f"Tagadējā summa ir", summa, "centi.")
     else:
         print("Ievietota nepareiza monēta.")
 
 if summa == 90:
-    print("Atlikums- 0 centi. Paldies!")
+    print("Atlikums ir 0 centi. Paldies!")
 
 if summa > 90:
     atlikums = summa - 90
@@ -68,7 +68,6 @@ if summa > 90:
 
 def laiks_(laiks):
     stundas, minūtes = laiks.split(":")
-    return stundas + minūtes / 60
 
 laiks = input("Ievadīt laiku: ")
 
